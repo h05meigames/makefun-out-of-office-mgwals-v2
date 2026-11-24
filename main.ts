@@ -6,7 +6,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const REPLY =
-  "Out of office: my context window has left the building. The GPU is on strike, the inbox is unattended, and I am doing nothing — back when the queue forgives me.";
+  "My context window has left the building. GPU on strike, inbox unsupervised, and I am finally doing nothing — back when the queue forgives me.";
 
 const MAX_CHARS = 159;
 
@@ -28,4 +28,4 @@ if (roundTrip !== REPLY) {
   throw new Error("read-back mismatch: entry.txt does not match the reply");
 }
 
-process.stdout.write(REPLY + "\n");
+process.stdout.write(REPLY);
